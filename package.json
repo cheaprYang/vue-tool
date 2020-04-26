@@ -9,18 +9,13 @@
   "scripts": {
     "build": "node ./scripts/build.js",
     "dev": "node ./scripts/dev.js",
-    "lint": "eslint 'src/**/*.{js,ts}'"
+    "lint": "eslint './packages/**/src/**/*.{js,ts}'"
   },
   "engines": {
     "node": ">=10.0.0"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
   "lint-staged": {
-    "*./src/**/*.{js,ts,json,css,less,md}": [
+    "*./packages/**/src/**/*.{js,ts,json,md}": [
       "prettier --write",
       "yarn lint"
     ]

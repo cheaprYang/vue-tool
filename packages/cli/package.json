@@ -5,14 +5,33 @@
   "main": "dist/cli.esm-bundler.js",
   "module": "dist/cli.esm-bundler.js",
   "types": "dist/cli.d.ts",
+  "bin": {
+    "vue-tool-service": "bin/cli-service.js"
+  },
   "files": [
     "index.js",
     "dist"
   ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc -p . "
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "@types/webpack": "^4.41.12",
+    "@types/webpack-chain": "^5.2.0",
+    "@types/webpack-dev-server": "^3.10.1",
+    "@types/webpack-merge": "^4.1.5",
+    "commander": "^5.1.0",
+    "copy-webpack-plugin": "^5.1.1",
+    "css-loader": "^3.5.3",
+    "html-webpack-plugin": "^4.2.0",
+    "webpack": "^4.43.0",
+    "webpack-chain": "^6.4.0",
+    "webpack-dev-server": "^3.10.3",
+    "webpack-merge": "^4.2.2",
+    "webpack-node-externals": "^1.7.2"
+  }
 }

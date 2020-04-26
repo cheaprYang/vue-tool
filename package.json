@@ -6,10 +6,14 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "workspaces": [
+    "packages/*"
+  ],
   "scripts": {
     "build": "node ./scripts/build.js",
+    "pretest": "yarn clean",
     "dev": "node ./scripts/dev.js",
-    "lint": "eslint './packages/**/src/**/*.{js,ts}'"
+    "lint": "eslint --fix packages/**/*.ts packages/**/bin/*"
   },
   "engines": {
     "node": ">=10.0.0"
